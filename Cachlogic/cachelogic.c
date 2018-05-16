@@ -1,3 +1,4 @@
+//whehdwns
 #include "tips.h"
 
 /* The following two functions are defined in util.c */
@@ -130,7 +131,7 @@ void accessMemory(address addr, word* data, WriteEnable we)
 	//Compute bit size
 	indexbits = uint_log2(set_count);//number of sets   /   # blocks/cache
 	offsetbits = uint_log2(block_size);//Cache block size in bytes
-	tagbits = 32 - indexbits - offsetbits; // addrlength –offset –index
+	tagbits = 32 - indexbits - offsetbits; // addrlength â€“offset â€“index
 	
 	//Compute the values
 	unsigned int offset = addr << (tagbits + indexbits);
@@ -258,7 +259,7 @@ void accessMemory(address addr, word* data, WriteEnable we)
 				else if (policy == RANDOM)
 					LRU_data = randomint(assoc);
 
-				//add ‘dirty’ bit to each block indicating that memory needs to be updated when block is replaced
+				//add â€˜dirtyâ€™ bit to each block indicating that memory needs to be updated when block is replaced
 				// If the block we are about to replace is dirty, replace it in memory
 				if(cache[index].block[LRU_data].dirty == DIRTY)
 				{
