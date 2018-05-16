@@ -1,0 +1,13 @@
+How to run Project 2
+
+download xming      http://www.straightrunning.com/XmingNotes/
+
+1. sudo apt-get install gtk2.0
+2. sudo apt-get -f install
+3. sudo apt-get install build-essential libgtk2.0-dev
+
+Run xming
+
+export DISPLAY=:0
+make
+./tips
